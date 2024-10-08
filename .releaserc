@@ -1,0 +1,31 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          { "type": "docs", "release": false },
+          { "type": "chore", "release": false },
+          { "type": "style", "release": false },
+          { "type": "refactor", "release": false },
+          { "type": "perf", "release": "patch" },
+          { "type": "feat", "release": "minor" },
+          { "type": "fix", "release": "patch" }
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
+        }
+      }
+    ],
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    ["@semantic-release/github", {
+      "assets": [
+        {"path": "build/app/outputs/flutter-apk/*.apk", "label": "Flutter APK"}
+      ]
+    }],
+    "@semantic-release/git"
+  ]
+}
