@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/Aadityajoshi151/toyversion/compare/v0.0.1...v0.1.0) (2024-10-08)
+
+
+### Features
+
+* adds ondemand workflow trigger flag ([6161f23](https://github.com/Aadityajoshi151/toyversion/commit/6161f2316100858ca0f91d7e341ff21038b4a38b))
+
 # 1.0.0 (2024-10-08)
 
 
