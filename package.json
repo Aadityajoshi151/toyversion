@@ -1,0 +1,9 @@
+{
+    "name": "toy-version",
+    "version": "0.0.1",
+    "description": "A demo Flutter project with semantic versioning.",
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {}
+  }
+  
