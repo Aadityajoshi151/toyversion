@@ -1,5 +1,6 @@
 {
   "branches": ["master"],
+  "version": "0.0.1",
   "plugins": [
     [
       "@semantic-release/commit-analyzer",
@@ -23,7 +24,7 @@
     "@semantic-release/changelog",
     ["@semantic-release/github", {
       "assets": [
-        {"path": "build/app/outputs/flutter-apk/*.apk", "label": "Flutter APK"}
+        {"path": "build/app/outputs/flutter-apk/*.apk", "label": "Toyversion-${nextRelease.version}"}
       ]
     }],
     "@semantic-release/git"
