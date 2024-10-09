@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/Aadityajoshi151/toyversion/compare/v0.1.0...v0.2.0) (2024-10-09)
+
+
+### Features
+
+* changes appbar title ([932a5f1](https://github.com/Aadityajoshi151/toyversion/commit/932a5f134b921e0179d61c5062f3c5fba4f075a4))
+
 # [0.1.0](https://github.com/Aadityajoshi151/toyversion/compare/v0.0.1...v0.1.0) (2024-10-08)
 
 
