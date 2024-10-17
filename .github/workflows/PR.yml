@@ -1,0 +1,23 @@
+name: Merge Commit Message Update
+on:
+  pull_request:
+    types:
+      - synchronize   # When commits are added to the PR
+      - ready_for_review  # When PR is marked ready for review
+
+jobs:
+  update-merge-commit-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Get all commits from PR
+        run: |
+          git fetch origin +refs/pull/${{ github.event.pull_request.number }}/merge
+          git log --pretty=format:"%s" origin/${{ github.event.pull_request.head.ref}}..origin/${{ github.event.pull_request.base.ref}} > commit_messages.txt
+
+      - name: Prepare Squash Commit Message
+        run: cat commit_messages.txt
+      
+      # If you need to push this amended message, you can add that here.
